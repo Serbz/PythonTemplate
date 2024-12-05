@@ -1,0 +1,92 @@
+#### SERBZ'S PYTHON TEMPLATE ###
+try:
+    import traceback
+except:
+    try:
+        import os
+
+        os.system("python -m pip install traceback")
+    except:
+        pass
+    pass
+try:
+    #### ADD ALL YOUR IMPORTS HERE ####
+    import asyncio, datetime, fnmatch, math, os, random, re, string, sys, time, colorama, ahk
+    from string import ascii_lowercase
+    from colorama import init, Fore, Back, Style
+    from dotenv import load_dotenv
+    from os import system, name
+    import psutil
+    from os.path import join, getsize
+except ModuleNotFoundError:
+    print(ModuleNotFoundError)
+    import os
+    try:
+        import re
+    except:
+        os.system("python3.9 -m pip install re")
+        os.execv(sys.executable, ['python'] + sys.argv)
+        SystemExit()
+        sys.exit()
+    def find_between(s, first, last):
+        try:
+            start = s.index(first) + len(first)
+            end = s.index(last, start)
+            return s[start:end]
+        except ValueError:
+            return ""
+    strStr = ModuleNotFoundError
+    stringy = find_between(traceback.format_exc(), "\'", "\'")
+    ##IF STRINGY IS MISSING IMPORT THAT DOES NOT MATCH PIP INSTALL PACKAGE NAME PUT TRY EXCEPTS HERE WHERE Stringy=
+    try:
+        os.system("python -m pip install " + stringy + " --compile --no-cache-dir")
+    except:
+        os.system("python3.9 -m pip install " + stringy + " --compile --no-cache-dir")
+        pass
+    try:
+        os.system("python -m pip install python-" + stringy + " --compile --no-cache-dir")
+    except:
+        os.system("python3.9 -m pip install python-" + stringy + " --compile --no-cache-dir")
+        pass
+    try:
+        os.system("python -m pip install " + stringy + "-python --compile --no-cache-dir")
+    except:
+        os.system("python3.9 -m pip install " + stringy + "-python --compile --no-cache-dir")
+        pass
+    try:
+        os.system("python -m pip install py" + stringy + " --compile --no-cache-dir")
+    except:
+        os.system("python3.9 -m pip install py" + stringy + " --compile --no-cache-dir")
+        pass
+    import sys
+    os.execv(sys.executable, ['python'] + sys.argv)
+    SystemExit()
+    sys.exit()
+    pass
+####### EDIT THIS ######
+ProjectFileName = "PROJECT FILE NAME HERE"
+########################
+wdir = str(os.getcwd())+r"\\"
+now = datetime.datetime.now()
+t = now.strftime("%d%m%y_%H%M%S")
+inputFile = open(fr"{wdir}\{ProjectFileName}", "r")
+try:
+    os.mkdir(fr"{wdir}\bak")
+except:
+    pass
+exportFile = open(fr"{wdir}\bak\{ProjectFileName}_{t}", "w")
+for line in inputFile:
+    new_line = line.replace('\t', '    ')
+    exportFile.write(new_line)
+inputFile.close()
+exportFile.close()
+
+async def Init():
+    print("You ran your python template YAY")
+    await asyncio.sleep(99999)
+    return
+    
+    
+loop = asyncio.get_event_loop()
+loop.create_task(Init())
+loop.run_forever()
